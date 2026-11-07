@@ -207,7 +207,7 @@ export function ScratchCard() {
     let total = 0;
     for (let i = 3; i < data.length; i += 4 * 16) {
       total++;
-      if (data[i] < 40) cleared++;
+      if ((data[i] ?? 0) < 40) cleared++;
     }
     if (total > 0 && cleared / total > scratchRevealThreshold(state.current.mobileTouch)) reveal();
   };
@@ -271,7 +271,7 @@ export function ScratchCard() {
                 28 NOVEMBER 2026
               </p>
               <p className="font-display text-xs tracking-[0.4em] text-gold-deep">SATURDAY</p>
-              <p className="mt-2 font-script text-[2.6rem] leading-none gold-text">Ananya & Samarth</p>
+              <p className="mt-2 px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">Uma & Ankit</p>
               <p className="mt-2 font-body text-sm italic leading-snug text-muted-foreground">
                 “Two hearts, one beautiful journey, forever together.”
               </p>

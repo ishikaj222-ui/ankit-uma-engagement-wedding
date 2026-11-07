@@ -1,4 +1,5 @@
 import coverBg from "@/assets/cover-bg.jpg";
+import weddingLogo from "@/assets/uma-ankit-wedding-logo.png.asset.json";
 import { GoldDivider } from "./ornaments";
 
 export function InvitationCover() {
@@ -14,6 +15,13 @@ export function InvitationCover() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/70" />
       <div className="relative px-6 pb-16 pt-20 text-center">
+        <img
+          src={weddingLogo.url}
+          alt="Uma and Ankit wedding logo"
+          width={1567}
+          height={1004}
+          className="mx-auto mb-5 h-auto w-full max-w-[280px] object-contain"
+        />
         <p className="font-display text-[11px] uppercase tracking-[0.4em] text-gold-deep">
           Wedding Invitation
         </p>
@@ -23,9 +31,9 @@ export function InvitationCover() {
           A&nbsp;·&nbsp;S
         </div>
 
-        <h1 className="mt-6 font-script text-[4.2rem] leading-none gold-text">Ananya</h1>
+        <h1 className="mt-6 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Uma</h1>
         <p className="mt-1 font-script text-4xl text-gold-deep">&</p>
-        <h1 className="mt-1 font-script text-[4.2rem] leading-none gold-text">Samarth</h1>
+        <h1 className="mt-1 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Ankit</h1>
 
         <GoldDivider className="mx-auto mt-8 w-44" />
 

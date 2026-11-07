@@ -67,9 +67,36 @@ const EVENTS: WeddingEvent[] = [
     cityState: "Jaipur, Rajasthan 302002",
     image: weddingImg,
   },
+  {
+    key: "haldi-december",
+    title: "Haldi Ceremony",
+    blurb: "Followed by lunch.",
+    date: "11 December 2026",
+    day: "Friday",
+    time: "12 PM onwards",
+    venue: "Jahapanah Club",
+    address: "Mandakini, Alaknanda,",
+    cityState: "New Delhi – 110019",
+    image: haldiImg,
+  },
+  {
+    key: "mehandi-december",
+    title: "Mehandi Ceremony",
+    blurb: "Followed by dinner.",
+    date: "11 December 2026",
+    day: "Friday",
+    time: "6:30 PM onwards",
+    venue: "Jahapanah Club",
+    address: "Mandakini, Alaknanda,",
+    cityState: "New Delhi – 110019",
+    image: mehendiImg,
+  },
 ];
 
 function mapsUrl(event: WeddingEvent) {
+  if (event.key === "haldi-december" || event.key === "mehandi-december") {
+    return "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw";
+  }
   const query = encodeURIComponent(`${event.venue}, ${event.address}, ${event.cityState}`);
   return `https://www.google.com/maps/search/?api=1&query=${query}`;
 }
@@ -103,7 +130,13 @@ export function EventCards() {
       </Reveal>
 
       <div className="mt-8 space-y-8">
-        {EVENTS.map((event, index) => (
+        {EVENTS.map((event) => {
+          const [dateDay = "11", dateMonth = "December"] = event.date.split(" ");
+          const directionsLabel =
+            event.key === "haldi-december" || event.key === "mehandi-december"
+              ? "Get Directions"
+              : "View Location";
+          return (
           <Reveal key={event.key} delayMs={80}>
             <article className={`theme-${event.key} ornate-frame overflow-hidden rounded-3xl bg-card`}>
               <div className="relative">
@@ -117,7 +150,7 @@ export function EventCards() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
                 <span className="event-accent-soft event-accent-chip event-accent-text absolute right-3 top-3 rounded-full border bg-card/70 px-3 py-1 font-display text-[9px] uppercase tracking-[0.25em] backdrop-blur-sm">
-                  {event.date.split(" ")[0]} {event.date.split(" ")[1].slice(0, 3)}
+                  {dateDay} {dateMonth.slice(0, 3)}
                 </span>
               </div>
 
@@ -144,12 +177,13 @@ export function EventCards() {
                   className="mt-5 flex items-center justify-center gap-2 rounded-full border border-gold/60 bg-linear-to-r from-gold-soft/45 to-gold/35 px-4 py-2.5 font-display text-[11px] uppercase tracking-[0.25em] text-ink transition-transform active:scale-95"
                 >
                   <PinIcon className="h-4 w-4" />
-                  View Location
+                  {directionsLabel}
                 </a>
               </div>
             </article>
           </Reveal>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

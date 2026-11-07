@@ -53,7 +53,7 @@
   --color-wine: var(--wine);
   --color-wine-deep: var(--wine-deep);
   --font-display: "Cinzel", Georgia, serif;
-  --font-script: "Great Vibes", cursive;
+  --font-script: "Cormorant Garamond", Georgia, serif;
   --font-body: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -138,6 +138,10 @@
 }
 
 @layer components {
+  .font-script {
+    font-style: italic;
+  }
+
   /* Shimmering gold display text */
   .gold-text {
     background-image: linear-gradient(

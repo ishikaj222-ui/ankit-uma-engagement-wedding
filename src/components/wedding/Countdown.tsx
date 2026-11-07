@@ -44,7 +44,7 @@ export function WeddingCountdown() {
           </p>
           <h2 className="mt-3 font-script text-5xl gold-text">Counting Down to Forever</h2>
           <p className="mx-auto mt-3 max-w-[300px] font-body text-base italic text-muted-foreground">
-            Every second brings us closer to Saturday, 28 November 2026, 7:00 PM.
+          Every second brings Uma & Ankit closer to Saturday, 28 November 2026, 7:00 PM.
           </p>
         </div>
       </Reveal>
