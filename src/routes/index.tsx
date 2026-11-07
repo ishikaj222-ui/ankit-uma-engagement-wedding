@@ -10,18 +10,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Ananya & Samarth — Wedding Invitation · 28 November 2026, Jaipur",
+        title: "Uma & Ankit — Wedding Invitation · 28 November 2026, Jaipur",
       },
       {
         name: "description",
         content:
-          "Ananya Sharma weds Samarth Mehta — Saturday, 28 November 2026 at 7:00 PM, The Royal Heritage Palace, Jaipur. Celebrate Haldi, Mehendi, Sangeet and the wedding with us.",
+          "Uma & Ankit's Indian wedding invitation — Saturday, 28 November 2026 at 7:00 PM in Jaipur, with Haldi, Mehandi, Sangeet and wedding celebrations.",
       },
-      { property: "og:title", content: "Ananya & Samarth — Wedding Invitation" },
+      { property: "og:title", content: "Uma & Ankit — Wedding Invitation" },
       {
         property: "og:description",
         content:
-          "Scratch, count down and celebrate — four days of wedding festivities in Jaipur, 25–28 November 2026.",
+          "Scratch, count down and celebrate Uma & Ankit's wedding festivities in Jaipur and New Delhi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -41,9 +41,9 @@ function WeddingInvitation() {
       <footer className="px-6 pb-12 pt-2 text-center">
         <GoldDivider className="mx-auto w-44" />
         <p className="mt-5 font-script text-4xl gold-text">With love & blessings</p>
-        <p className="mt-2 font-body text-base text-muted-foreground">The Sharma & Mehta Families</p>
+        <p className="mt-2 font-body text-base text-muted-foreground">Together with their families</p>
         <p className="mt-5 font-display text-[10px] uppercase tracking-[0.3em] text-gold-deep">
-          #AnanyaWedsSamarth · Jaipur, Rajasthan
+          #UmaWedsAnkit · Jaipur, Rajasthan
         </p>
       </footer>
 

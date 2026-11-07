@@ -53,7 +53,7 @@
   --color-wine: var(--wine);
   --color-wine-deep: var(--wine-deep);
   --font-display: "Cinzel", Georgia, serif;
-  --font-script: "Great Vibes", cursive;
+  --font-script: "Cormorant Garamond", Georgia, serif;
   --font-body: "Cormorant Garamond", Georgia, serif;
 }
 
@@ -138,6 +138,10 @@
 }
 
 @layer components {
+  .font-script {
+    font-style: italic;
+  }
+
   /* Shimmering gold display text */
   .gold-text {
     background-image: linear-gradient(
@@ -331,6 +335,12 @@
 
   .event-accent-ring {
     box-shadow: 0 14px 30px -18px color-mix(in oklab, var(--event-accent) 60%, transparent);
+  }
+}
+
+@media (max-width: 767px) and (pointer: coarse) {
+  .scratch-canvas {
+    touch-action: none;
   }
 }
 
