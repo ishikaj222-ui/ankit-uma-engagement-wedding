@@ -4,6 +4,10 @@ import { Reveal } from "./Reveal";
 
 type Pt = { x: number; y: number };
 
+export function scratchRevealThreshold(isMobileTouch: boolean) {
+  return isMobileTouch ? 0.25 : 0.5;
+}
+
 function tokenColor(name: string, fallback: string) {
   const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   return value || fallback;
@@ -26,7 +30,7 @@ function roundRectPath(ctx: CanvasRenderingContext2D, x: number, y: number, w: n
 /** The single scratch-to-reveal card on the site: the wedding date. */
 export function ScratchCard() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const state = useRef({ drawing: false, last: null as Pt | null, moves: 0, done: false });
+  const state = useRef({ drawing: false, last: null as Pt | null, moves: 0, done: false, mobileTouch: false });
   const [revealed, setRevealed] = useState(false);
   const [fxId, setFxId] = useState(0);
 
@@ -205,12 +209,15 @@ export function ScratchCard() {
       total++;
       if (data[i] < 40) cleared++;
     }
-    if (total > 0 && cleared / total > 0.5) reveal();
+    if (total > 0 && cleared / total > scratchRevealThreshold(state.current.mobileTouch)) reveal();
   };
 
   const onPointerDown = (e: ReactPointerEvent<HTMLCanvasElement>) => {
     if (revealed) return;
     e.currentTarget.setPointerCapture(e.pointerId);
+    state.current.mobileTouch =
+      e.pointerType === "touch" &&
+      window.matchMedia("(max-width: 767px) and (pointer: coarse)").matches;
     state.current.drawing = true;
     const p = posOf(e);
     state.current.last = p;
@@ -223,10 +230,11 @@ export function ScratchCard() {
     const p = posOf(e);
     erase(s.last ?? p, p);
     s.last = p;
-    if (++s.moves % 10 === 0) checkProgress();
+    if (++s.moves % (s.mobileTouch ? 4 : 10) === 0) checkProgress();
   };
 
   const endScratch = () => {
+    if (state.current.mobileTouch) checkProgress();
     state.current.drawing = false;
     state.current.last = null;
   };

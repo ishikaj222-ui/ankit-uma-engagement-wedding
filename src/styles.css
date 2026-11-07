@@ -334,6 +334,12 @@
   }
 }
 
+@media (max-width: 767px) and (pointer: coarse) {
+  .scratch-canvas {
+    touch-action: none;
+  }
+}
+
 @keyframes gold-shimmer {
   to {
     background-position: -200% 0;
