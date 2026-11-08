@@ -301,6 +301,11 @@
   }
 
   /* Per-event accent themes (tokens only) */
+  .theme-engagement {
+    --event-accent: var(--sangeet-deep);
+    --event-accent-rich: var(--sangeet);
+  }
+
   .theme-haldi {
     --event-accent: var(--haldi-deep);
     --event-accent-rich: var(--haldi);

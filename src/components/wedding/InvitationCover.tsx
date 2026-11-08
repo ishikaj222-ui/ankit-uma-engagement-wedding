@@ -27,10 +27,6 @@ export function InvitationCover() {
         </p>
         <GoldDivider className="mx-auto mt-5 w-44" />
 
-        <div className="mx-auto mt-8 flex h-24 w-24 items-center justify-center rounded-full border border-gold/70 ornate-frame font-display text-xl font-semibold tracking-[0.15em] text-gold-deep">
-          A&nbsp;·&nbsp;S
-        </div>
-
         <h1 className="mt-6 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Uma</h1>
         <p className="mt-1 font-script text-4xl text-gold-deep">&</p>
         <h1 className="mt-1 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Ankit</h1>
@@ -42,10 +38,10 @@ export function InvitationCover() {
         </p>
 
         <div className="mt-7 space-y-2.5 font-display text-sm tracking-[0.18em] text-ink">
-          <p className="font-semibold text-gold-deep">SATURDAY · 28 NOVEMBER 2026</p>
+          <p className="font-semibold text-gold-deep">SATURDAY · 12 DECEMBER 2026</p>
           <p>7:00 PM ONWARDS</p>
           <p className="text-xs tracking-[0.25em] text-muted-foreground">
-            THE ROYAL HERITAGE PALACE · JAIPUR, RAJASTHAN
+            RAJ DARBAR HALL · GT KARNAL ROAD, NEW DELHI
           </p>
         </div>
 
