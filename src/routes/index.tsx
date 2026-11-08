@@ -10,18 +10,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Uma & Ankit — Wedding Invitation · 28 November 2026, Jaipur",
+        title: "Uma & Ankit — Wedding Invitation · 12 December 2026, Delhi",
       },
       {
         name: "description",
         content:
-          "Uma & Ankit's Indian wedding invitation — Saturday, 28 November 2026 at 7:00 PM in Jaipur, with Haldi, Mehandi, Sangeet and wedding celebrations.",
+          "Uma & Ankit's Indian wedding invitation — engagement on 5 December and wedding celebrations on 11–12 December 2026 in Delhi.",
       },
       { property: "og:title", content: "Uma & Ankit — Wedding Invitation" },
       {
         property: "og:description",
         content:
-          "Scratch, count down and celebrate Uma & Ankit's wedding festivities in Jaipur and New Delhi.",
+          "Scratch, count down and celebrate Uma & Ankit's engagement, Haldi, Mehandi and wedding festivities in Delhi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -43,7 +43,7 @@ function WeddingInvitation() {
         <p className="mt-5 font-script text-4xl gold-text">With love & blessings</p>
         <p className="mt-2 font-body text-base text-muted-foreground">Together with their families</p>
         <p className="mt-5 font-display text-[10px] uppercase tracking-[0.3em] text-gold-deep">
-          #UmaWedsAnkit · Jaipur, Rajasthan
+          #UmaWedsAnkit · Delhi
         </p>
       </footer>
 
