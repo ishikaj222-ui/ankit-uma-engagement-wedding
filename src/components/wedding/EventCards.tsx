@@ -2,6 +2,7 @@ import haldiImg from "@/assets/haldi.jpg";
 import mehendiImg from "@/assets/mehendi.jpg";
 import sangeetImg from "@/assets/sangeet.jpg";
 import weddingImg from "@/assets/wedding.jpg";
+import type { ReactNode } from "react";
 import { GoldDivider, PinIcon } from "./ornaments";
 import { Reveal } from "./Reveal";
 
@@ -100,7 +101,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
   },
 ];
 
-function DetailRow({ label, value }: { label: string; value: React.ReactNode }) {
+function DetailRow({ label, value }: { label: string; value: ReactNode }) {
   return (
     <div className="flex gap-3">
       <span className="w-16 shrink-0 font-display text-[9px] uppercase tracking-[0.22em] text-muted-foreground pt-1">

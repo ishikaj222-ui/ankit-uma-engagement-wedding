@@ -47,4 +47,15 @@ describe("scratch card reveal threshold", () => {
       },
     ]);
   });
+
+  it("preserves every supplied ceremony time and invitation family name", () => {
+    expect(WEDDING_EVENTS[0]?.time).toBe("6:00 P.M. ONWARDS");
+    expect(WEDDING_EVENTS[1]?.time).toBe("12:00 PM ONWARDS");
+    expect(WEDDING_EVENTS[2]?.time).toBe("6:30 PM ONWARDS");
+    expect(WEDDING_EVENTS[3]?.schedules).toEqual([
+      { label: "Sehra Bandi", time: "5:00 P.M. ONWARDS" },
+      { label: "Ghurchari", time: "6:00 P.M. ONWARDS" },
+    ]);
+    expect(WEDDING_EVENTS.filter((event) => event.coupleDetails)).toHaveLength(2);
+  });
 });

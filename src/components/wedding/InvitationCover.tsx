@@ -39,9 +39,8 @@ export function InvitationCover() {
 
         <div className="mt-7 space-y-2.5 font-display text-sm tracking-[0.18em] text-ink">
           <p className="font-semibold text-gold-deep">SATURDAY · 12 DECEMBER 2026</p>
-          <p>7:00 PM ONWARDS</p>
           <p className="text-xs tracking-[0.25em] text-muted-foreground">
-            RAJ DARBAR HALL · GT KARNAL ROAD, NEW DELHI
+            RAJ DARBAR HALL · NEW DELHI
           </p>
         </div>
 
