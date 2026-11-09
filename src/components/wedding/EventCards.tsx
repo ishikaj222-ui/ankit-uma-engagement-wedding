@@ -1,6 +1,6 @@
 import haldiImg from "@/assets/haldi.jpg";
 import mehendiImg from "@/assets/mehendi.jpg";
-import sangeetImg from "@/assets/sangeet.jpg";
+import engagementImg from "@/assets/engagement-ring-exchange.jpg";
 import weddingImg from "@/assets/wedding.jpg";
 import type { ReactNode } from "react";
 import { GoldDivider, PinIcon } from "./ornaments";
@@ -33,10 +33,10 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
         label: "Venue",
         name: "EME Officers Mess",
         address: ["Thimayya Park, Baird Place,", "Delhi Cantonment, ND-110010."],
-        mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
+        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
       },
     ],
-    image: sangeetImg,
+    image: engagementImg,
   },
   {
     key: "haldi",
@@ -50,7 +50,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
         label: "Venue",
         name: "Jahapanah Club",
         address: ["Mandakini, Alaknanda,", "New Delhi – 110019."],
-        mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
+        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
       },
     ],
     image: haldiImg,
@@ -67,7 +67,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
         label: "Venue",
         name: "Jahapanah Club",
         address: ["Mandakini, Alaknanda,", "New Delhi – 110019."],
-        mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
+        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
       },
     ],
     image: mehendiImg,
@@ -88,13 +88,13 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
         label: "Venue 1 — Sehra Bandi & Ghurchari",
         name: "UDMAN HOTELS & RESORTS",
         address: ["Q4WV+7Q6 NH-1,", "GT Karnal Road, ND-110036."],
-        mapsUrl: "https://maps.app.goo.gl/8hBSdVNR122eshcz8g_st-iw",
+        mapsUrl: "https://maps.app.goo.gl/SFuD5pBEoPLhfBGUA",
       },
       {
         label: "Venue 2 — Wedding",
         name: "RAJ DARBAR HALL",
         address: ["City Park Green Resort,", "NH-1, GT Karnal Road, ND-110036."],
-        mapsUrl: "https://maps.app.goo.gl/fgd7WUWgCeYljunk67g",
+        mapsUrl: "https://maps.app.goo.gl/VJBji6XWqyooTyAN9",
       },
     ],
     image: weddingImg,

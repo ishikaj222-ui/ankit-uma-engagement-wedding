@@ -42,9 +42,6 @@ function WeddingInvitation() {
         <GoldDivider className="mx-auto w-44" />
         <p className="mt-5 font-script text-4xl gold-text">With love & blessings</p>
         <p className="mt-2 font-body text-base text-muted-foreground">Together with their families</p>
-        <p className="mt-5 font-display text-[10px] uppercase tracking-[0.3em] text-gold-deep">
-          #UmaWedsAnkit · Delhi
-        </p>
       </footer>
 
       {/* Interactive palace doors — the entry experience */}

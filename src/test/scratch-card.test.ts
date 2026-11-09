@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-import { scratchRevealThreshold } from "@/components/wedding/ScratchCard";
+import { SCRATCH_CARD_DATE, scratchRevealThreshold } from "@/components/wedding/ScratchCard";
+import { WEDDING_AT } from "@/components/wedding/Countdown";
 import { WEDDING_EVENTS } from "@/components/wedding/EventCards";
 
 describe("scratch card reveal threshold", () => {
@@ -10,6 +11,11 @@ describe("scratch card reveal threshold", () => {
 
   it("keeps the existing 50% threshold outside mobile touch", () => {
     expect(scratchRevealThreshold(false)).toBe(0.5);
+  });
+
+  it("uses 12 December 2026 for the scratch card and countdown", () => {
+    expect(SCRATCH_CARD_DATE).toBe("12 DECEMBER 2026");
+    expect(WEDDING_AT).toBe(new Date("2026-12-12T00:00:00+05:30").getTime());
   });
 
   it("shows the four ceremonies with the supplied dates, venues, addresses, and directions", () => {
@@ -22,28 +28,30 @@ describe("scratch card reveal threshold", () => {
     expect(WEDDING_EVENTS[0]?.venues[0]).toMatchObject({
       name: "EME Officers Mess",
       address: ["Thimayya Park, Baird Place,", "Delhi Cantonment, ND-110010."],
-      mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
+      mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
     });
     expect(WEDDING_EVENTS[1]?.venues[0]?.address).toEqual([
       "Mandakini, Alaknanda,",
       "New Delhi – 110019.",
     ]);
+    expect(WEDDING_EVENTS[1]?.venues[0]?.mapsUrl).toBe("https://maps.app.goo.gl/P5VzCwtdv2r5kjf88");
     expect(WEDDING_EVENTS[2]?.venues[0]?.address).toEqual([
       "Mandakini, Alaknanda,",
       "New Delhi – 110019.",
     ]);
+    expect(WEDDING_EVENTS[2]?.venues[0]?.mapsUrl).toBe("https://maps.app.goo.gl/P5VzCwtdv2r5kjf88");
     expect(WEDDING_EVENTS[3]?.venues).toMatchObject([
       {
         label: "Venue 1 — Sehra Bandi & Ghurchari",
         name: "UDMAN HOTELS & RESORTS",
         address: ["Q4WV+7Q6 NH-1,", "GT Karnal Road, ND-110036."],
-        mapsUrl: "https://maps.app.goo.gl/8hBSdVNR122eshcz8g_st-iw",
+        mapsUrl: "https://maps.app.goo.gl/SFuD5pBEoPLhfBGUA",
       },
       {
         label: "Venue 2 — Wedding",
         name: "RAJ DARBAR HALL",
         address: ["City Park Green Resort,", "NH-1, GT Karnal Road, ND-110036."],
-        mapsUrl: "https://maps.app.goo.gl/fgd7WUWgCeYljunk67g",
+        mapsUrl: "https://maps.app.goo.gl/VJBji6XWqyooTyAN9",
       },
     ]);
   });
