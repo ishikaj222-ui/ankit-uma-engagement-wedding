@@ -10,18 +10,18 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title: "Uma & Ankit — Wedding Invitation · 12 December 2026, Delhi",
+        title: "Ankit & Uma — Wedding Invitation · 12 December 2026, Delhi",
       },
       {
         name: "description",
         content:
-          "Uma & Ankit's Indian wedding invitation — engagement on 5 December and wedding celebrations on 11–12 December 2026 in Delhi.",
+          "Ankit & Uma's Indian wedding invitation — engagement on 5 December and wedding celebrations on 11–12 December 2026 in Delhi.",
       },
-      { property: "og:title", content: "Uma & Ankit — Wedding Invitation" },
+      { property: "og:title", content: "Ankit & Uma — Wedding Invitation" },
       {
         property: "og:description",
         content:
-          "Scratch, count down and celebrate Uma & Ankit's engagement, Haldi, Mehandi and wedding festivities in Delhi.",
+          "Scratch, count down and celebrate Ankit & Uma's engagement, Haldi, Mehandi and wedding festivities in Delhi.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -42,9 +42,6 @@ function WeddingInvitation() {
         <GoldDivider className="mx-auto w-44" />
         <p className="mt-5 font-script text-4xl gold-text">With love & blessings</p>
         <p className="mt-2 font-body text-base text-muted-foreground">Together with their families</p>
-        <p className="mt-5 font-display text-[10px] uppercase tracking-[0.3em] text-gold-deep">
-          #UmaWedsAnkit · Delhi
-        </p>
       </footer>
 
       {/* Interactive palace doors — the entry experience */}

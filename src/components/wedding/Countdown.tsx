@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import { GoldDivider } from "./ornaments";
 
-const WEDDING_AT = new Date("2026-12-12T00:00:00+05:30").getTime();
+export const WEDDING_AT = new Date("2026-12-12T00:00:00+05:30").getTime();
 
 type Parts = { days: number; hours: number; minutes: number; seconds: number; past: boolean };
 
@@ -44,7 +44,7 @@ export function WeddingCountdown() {
           </p>
           <h2 className="mt-3 font-script text-5xl gold-text">Counting Down to Forever</h2>
           <p className="mx-auto mt-3 max-w-[300px] font-body text-base italic text-muted-foreground">
-          Every second brings Uma & Ankit closer to Saturday, 12 December 2026.
+          Every second brings Ankit &amp; Uma closer to Saturday, 12 December 2026.
           </p>
         </div>
       </Reveal>

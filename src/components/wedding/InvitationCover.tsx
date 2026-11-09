@@ -22,14 +22,14 @@ export function InvitationCover() {
           height={1004}
           className="mx-auto mb-5 h-auto w-full max-w-[280px] object-contain"
         />
-        <p className="font-display text-[11px] uppercase tracking-[0.4em] text-gold-deep">
+        <h1 className="mt-1 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">ANKIT</h1>
+        <p className="mt-1 font-script text-4xl text-gold-deep">&</p>
+        <h1 className="mt-1 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">UMA</h1>
+
+        <p className="mt-5 font-display text-[11px] uppercase tracking-[0.4em] text-gold-deep">
           Wedding Invitation
         </p>
         <GoldDivider className="mx-auto mt-5 w-44" />
-
-        <h1 className="mt-6 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Uma</h1>
-        <p className="mt-1 font-script text-4xl text-gold-deep">&</p>
-        <h1 className="mt-1 px-1 pt-1 font-script text-[4.2rem] leading-tight gold-text">Ankit</h1>
 
         <GoldDivider className="mx-auto mt-8 w-44" />
 

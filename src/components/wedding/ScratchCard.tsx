@@ -8,6 +8,8 @@ export function scratchRevealThreshold(isMobileTouch: boolean) {
   return isMobileTouch ? 0.25 : 0.5;
 }
 
+export const SCRATCH_CARD_DATE = "12 DECEMBER 2026";
+
 function tokenColor(name: string, fallback: string) {
   const value = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   return value || fallback;
@@ -268,10 +270,12 @@ export function ScratchCard() {
               <p className="font-display text-[10px] tracking-[0.45em] text-gold-deep">SAVE THE DATE</p>
               <GoldDivider className="w-28" />
               <p className="mt-1 font-display text-[1.65rem] font-semibold tracking-wide text-ink">
-                28 NOVEMBER 2026
+                {SCRATCH_CARD_DATE}
               </p>
               <p className="font-display text-xs tracking-[0.4em] text-gold-deep">SATURDAY</p>
-              <p className="mt-2 px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">Uma & Ankit</p>
+              <p className="mt-2 px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">ANKIT</p>
+              <p className="font-script text-2xl text-gold-deep">&</p>
+              <p className="px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">UMA</p>
               <p className="mt-2 font-body text-sm italic leading-snug text-muted-foreground">
                 “Two hearts, one beautiful journey, forever together.”
               </p>
