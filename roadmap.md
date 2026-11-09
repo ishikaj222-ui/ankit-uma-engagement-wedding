@@ -1,9 +1,7 @@
 # Invitation update
 
-- [x] Update the existing invitation for Uma & Ankit and add their uploaded logo at the top.
-- [x] Adjust invitation typography so characters are not clipped at the top.
-- [x] Add the requested Haldi and Mehandi details and shared directions link.
-- [x] Enable one-gesture mobile scratching with a 25% reveal threshold and no page scrolling while scratching.
-- [ ] Replace the event list with the specified Engagement, Haldi, Mehandi, and Wedding details.
-- [ ] Remove the A/S monogram, update the invitation date and Delhi location, and retain the Uma & Ankit logo.
-- [ ] Verify ceremony details, direction links, and scratch behavior on mobile and desktop.
+- [ ] Replace the opening logo with the newly uploaded Uma & Ankit artwork and show Ankit first.
+- [ ] Update the scratch-card reveal to 12 December 2026, with Ankit before Uma; preserve mobile-only behavior.
+- [ ] Keep the countdown on 12 December 2026 and replace the engagement image with a realistic ring exchange.
+- [ ] Update the requested ceremony map links and remove the closing hashtag.
+- [ ] Verify the invitation, directions, countdown, and scratch interaction on mobile and desktop.
