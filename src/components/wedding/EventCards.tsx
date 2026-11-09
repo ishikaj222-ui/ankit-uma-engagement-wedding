@@ -33,7 +33,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
         label: "Venue",
         name: "EME Officers Mess",
         address: ["Thimayya Park, Baird Place,", "Delhi Cantonment, ND-110010."],
-        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
+        mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
       },
     ],
     image: engagementImg,

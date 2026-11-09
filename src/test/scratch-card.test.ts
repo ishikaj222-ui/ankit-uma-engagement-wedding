@@ -28,7 +28,7 @@ describe("scratch card reveal threshold", () => {
     expect(WEDDING_EVENTS[0]?.venues[0]).toMatchObject({
       name: "EME Officers Mess",
       address: ["Thimayya Park, Baird Place,", "Delhi Cantonment, ND-110010."],
-      mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
+      mapsUrl: "https://maps.app.goo.gl/ycV4tmTmzPnaTNVt5?g_st=iw",
     });
     expect(WEDDING_EVENTS[1]?.venues[0]?.address).toEqual([
       "Mandakini, Alaknanda,",
