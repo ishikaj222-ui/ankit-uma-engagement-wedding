@@ -5,7 +5,6 @@ import { ScratchCard } from "@/components/wedding/ScratchCard";
 import { WeddingCountdown } from "@/components/wedding/Countdown";
 import { EventCards } from "@/components/wedding/EventCards";
 import { GoldDivider } from "@/components/wedding/ornaments";
-import weddingInstrumental from "@/assets/royal-wedding-instrumental.mp3.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -36,7 +35,7 @@ function WeddingInvitation() {
     <main className="invitation-paper relative mx-auto min-h-dvh w-full max-w-[430px] overflow-x-clip font-body shadow-2xl shadow-black/50">
   <audio
   id="wedding-instrumental"
-  src={weddingInstrumental.url}
+  src="/Do%20Anjaane%20Ajnabi%20-%20Vivah%20-%20Shahid%20Kapoor,%20Amrita%20Rao%20-%20Old%20Hindi%20Romantic%20Songs.mp3"
   loop
   preload="auto"
   aria-hidden="true"
