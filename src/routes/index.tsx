@@ -5,6 +5,7 @@ import { ScratchCard } from "@/components/wedding/ScratchCard";
 import { WeddingCountdown } from "@/components/wedding/Countdown";
 import { EventCards } from "@/components/wedding/EventCards";
 import { GoldDivider } from "@/components/wedding/ornaments";
+import weddingInstrumental from "@/assets/royal-wedding-instrumental.mp3.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,16 +34,13 @@ export const Route = createFileRoute("/")({
 function WeddingInvitation() {
   return (
     <main className="invitation-paper relative mx-auto min-h-dvh w-full max-w-[430px] overflow-x-clip font-body shadow-2xl shadow-black/50">
-     <iframe
-  width="100%"
-  height="225"
-  src="https://www.youtube.com/embed/tJuivqCGCpI"
-  title="Ankit and Uma Wedding Music"
-  allow="autoplay; encrypted-media; picture-in-picture"
-  allowFullScreen
-  className="w-full"
-  loading="lazy"
-      />
+  <audio
+  id="wedding-instrumental"
+  src={weddingInstrumental.url}
+  loop
+  preload="auto"
+  aria-hidden="true"
+/>
       <InvitationCover />
       <ScratchCard />
       <WeddingCountdown />
