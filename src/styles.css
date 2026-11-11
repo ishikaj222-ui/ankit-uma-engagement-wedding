@@ -138,6 +138,19 @@
 }
 
 @layer components {
+  .invitation-paper {
+    background-color: var(--background);
+    background-image:
+      linear-gradient(
+        color-mix(in oklab, var(--background) 91%, transparent),
+        color-mix(in oklab, var(--background) 91%, transparent)
+      ),
+      url("./assets/cover-bg.jpg");
+    background-size: 100% 100%, 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat, repeat-y;
+  }
+
   .font-script {
     font-style: italic;
   }

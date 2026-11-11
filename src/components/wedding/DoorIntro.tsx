@@ -1,9 +1,19 @@
 import { useEffect, useState } from "react";
 import doorsImg from "@/assets/palace-doors.jpg";
+import auMonogram from "@/assets/au-door-monogram.png.asset.json";
 
 export function DoorIntro() {
   const [open, setOpen] = useState(false);
   const [gone, setGone] = useState(false);
+
+  const openInvitation = () => {
+    const audio = document.getElementById("wedding-instrumental");
+    if (audio instanceof HTMLAudioElement) {
+      audio.volume = 0.32;
+      void audio.play().catch(() => undefined);
+    }
+    setOpen(true);
+  };
 
   useEffect(() => {
     document.body.style.overflow = open ? "" : "hidden";
@@ -34,14 +44,18 @@ export function DoorIntro() {
         </div>
         <button
           type="button"
-          onClick={() => setOpen(true)}
+          onClick={openInvitation}
           disabled={open}
           aria-label="Open the wedding invitation"
-          className="absolute inset-0 z-10 flex items-end justify-center pb-16"
+          className="absolute left-1/2 top-1/2 z-10 flex size-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/70 bg-maroon-deep/90 p-4 shadow-2xl ring-1 ring-gold/30 transition-transform duration-300 hover:scale-105 active:scale-95 disabled:pointer-events-none"
         >
-          <span className="door-hint rounded-full border border-gold/50 bg-maroon-deep/70 px-6 py-2.5 font-display text-[10px] uppercase tracking-[0.35em] text-gold-soft backdrop-blur-sm">
-            Tap to open
-          </span>
+          <img
+            src={auMonogram.url}
+            alt="AU monogram"
+            width={433}
+            height={364}
+            className="h-full w-full object-contain"
+          />
         </button>
       </div>
     </div>
