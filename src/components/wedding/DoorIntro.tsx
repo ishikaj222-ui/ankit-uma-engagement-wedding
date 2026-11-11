@@ -1,7 +1,8 @@
 
+
 import { useEffect, useState } from "react";
 import doorsImg from "@/assets/palace-doors.jpg";
-src="/Copy of Save the Date (1).png"
+import auMonogram from "@/assets/au-door-monogram.png.asset.json";
 
 export function DoorIntro() {
   const [open, setOpen] = useState(false);
