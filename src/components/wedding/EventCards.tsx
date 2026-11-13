@@ -1,5 +1,3 @@
-import haldiImg from "@/assets/haldi.jpg";
-import mehendiImg from "@/assets/mehendi.jpg";
 import engagementImg from "@/assets/engagement-ring-exchange.jpg";
 import weddingImg from "@/assets/wedding.jpg";
 import type { ReactNode } from "react";
@@ -21,6 +19,7 @@ type WeddingEvent = {
   image: string;
 };
 
+
 export const WEDDING_EVENTS: WeddingEvent[] = [
   {
     key: "engagement",
@@ -28,7 +27,7 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     date: "5 December 2026",
     day: "Saturday",
     time: "6:00 P.M. onwards (followed by Dinner)",
-coupleDetails: true,
+    coupleDetails: true,
     venues: [
       {
         label: "Venue",
@@ -38,40 +37,6 @@ coupleDetails: true,
       },
     ],
     image: engagementImg,
-  },
-  {
-    key: "haldi",
-    title: "Haldi Ceremony",
-    
-    date: "11 December 2026",
-    day: "Friday",
-    time: "12:00 PM onwards (followed by lunch)",
-    venues: [
-      {
-        label: "Venue",
-        name: "Jahapanah Club",
-        address: ["Mandakini, Alaknanda,", "New Delhi – 110019."],
-        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
-      },
-    ],
-    image: haldiImg,
-  },
-  {
-    key: "mehendi",
-    title: "Mehandi Ceremony",
-  
-    date: "11 December 2026",
-    day: "Friday",
-    time: "6:30 PM onwards (followed by dinner)",
-    venues: [
-      {
-        label: "Venue",
-        name: "Jahapanah Club",
-        address: ["Mandakini, Alaknanda,", "New Delhi – 110019."],
-        mapsUrl: "https://maps.app.goo.gl/P5VzCwtdv2r5kjf88",
-      },
-    ],
-    image: mehendiImg,
   },
   {
     key: "wedding",
@@ -94,15 +59,15 @@ coupleDetails: true,
       },
       {
         label: "Ghurchari",
-    
-  name: "Venue - RAJ DARBAR HALL, City Park Green Resort",
-  address: ["NH-1, GT Karnal Road, ND-110036."],
+        name: "Venue - RAJ DARBAR HALL, City Park Green Resort",
+        address: ["NH-1, GT Karnal Road, ND-110036."],
         mapsUrl: "https://maps.app.goo.gl/WBrKtd6Crh44GtC86",
       },
     ],
     image: weddingImg,
   },
 ];
+
 
 function DetailRow({ label, value }: { label: ReactNode; value: ReactNode }) {
   return (
