@@ -267,16 +267,14 @@ export function ScratchCard() {
                 revealed ? "scale-100" : "scale-95"
               }`}
             >
-              <p className="font-display text-[10px] tracking-[0.45em] text-gold-deep">SAVE THE DATE</p>
+            
               <GoldDivider className="w-28" />
               <p className="mt-1 font-display text-[1.65rem] font-semibold tracking-wide text-ink">
                 {SCRATCH_CARD_DATE}
               </p>
               <p className="font-display text-xs tracking-[0.4em] text-gold-deep">SATURDAY</p>
-              <p className="mt-2 px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">ANKIT</p>
-              <p className="font-script text-2xl text-gold-deep">&</p>
-              <p className="px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">UMA</p>
-              <p className="mt-2 font-body text-sm italic leading-snug text-muted-foreground">
+<p className="mt-2 px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">Ankit</p>              <p className="font-script text-2xl text-gold-deep">&</p>
+<p className="px-1 pt-1 font-script text-[2.6rem] leading-tight gold-text">Uma</p>              <p className="mt-2 font-body text-sm italic leading-snug text-muted-foreground">
                 “Two hearts, one beautiful journey, forever together.”
               </p>
             </div>

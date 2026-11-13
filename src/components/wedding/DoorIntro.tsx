@@ -2,8 +2,7 @@
 
 import { useEffect, useState } from "react";
 import doorsImg from "@/assets/palace-doors.jpg";
-import auMonogram from "@/assets/au-door-monogram.png.asset.json";
-
+import auMonogram from "@/assets/Copy of Save the Date (1).png";
 export function DoorIntro() {
   const [open, setOpen] = useState(false);
   const [gone, setGone] = useState(false);
@@ -49,14 +48,13 @@ export function DoorIntro() {
           onClick={openInvitation}
           disabled={open}
           aria-label="Open the wedding invitation"
-          className="absolute left-1/2 top-1/2 z-10 flex size-36 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/70 bg-maroon-deep/90 p-4 shadow-2xl ring-1 ring-gold/30 transition-transform duration-300 hover:scale-105 active:scale-95 disabled:pointer-events-none"
-        >
+className="absolute left-1/2 top-1/2 z-10 flex size-32 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-gold/70 bg-maroon-deep/90 p-2 shadow-2xl ring-1 ring-gold/30 transition-transform duration-300 hover:scale-105 active:scale-95 disabled:pointer-events-none"        >
           <img
-            src={auMonogram.url}
+            src={auMonogram}
             alt="AU monogram"
             width={433}
             height={364}
-            className="h-full w-full object-contain"
+            className="h-full w-full scale-[2.9] object-contain"
           />
         </button>
       </div>

@@ -13,6 +13,7 @@ type WeddingEvent = {
   day: string;
   blurb?: string;
   time?: string;
+  followedBy?: string;
   schedules?: { label: string; time: string }[];
   coupleDetails?: boolean;
   weddingInvitation?: boolean;
@@ -26,8 +27,8 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     title: "Engagement Ceremony",
     date: "5 December 2026",
     day: "Saturday",
-    time: "6:00 P.M. ONWARDS",
-    coupleDetails: true,
+    time: "6:00 P.M. onwards (followed by Dinner)",
+coupleDetails: true,
     venues: [
       {
         label: "Venue",
@@ -41,10 +42,10 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
   {
     key: "haldi",
     title: "Haldi Ceremony",
-    blurb: "Followed by Lunch.",
+    
     date: "11 December 2026",
     day: "Friday",
-    time: "12:00 PM ONWARDS",
+    time: "12:00 PM onwards (followed by lunch)",
     venues: [
       {
         label: "Venue",
@@ -58,10 +59,10 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
   {
     key: "mehendi",
     title: "Mehandi Ceremony",
-    blurb: "Followed by Dinner.",
+  
     date: "11 December 2026",
     day: "Friday",
-    time: "6:30 PM ONWARDS",
+    time: "6:30 PM onwards (followed by dinner)",
     venues: [
       {
         label: "Venue",
@@ -80,31 +81,33 @@ export const WEDDING_EVENTS: WeddingEvent[] = [
     coupleDetails: true,
     weddingInvitation: true,
     schedules: [
-      { label: "Sehra Bandi", time: "5:00 P.M. ONWARDS" },
-      { label: "Ghurchari", time: "6:00 P.M. ONWARDS" },
+      { label: "Sehra Bandi", time: "5:00 P.M. onwards" },
+      { label: "Ghurchari", time: "6:00 P.M. onwards" },
     ],
+    followedBy: "(followed by dinner)",
     venues: [
       {
-        label: "Venue 1 — Sehra Bandi & Ghurchari",
-        name: "UDMAN HOTELS & RESORTS",
+        label: "Sehra Bandi",
+        name: "Venue - UDMAN HOTELS & RESORTS",
         address: ["Q4WV+7Q6 NH-1,", "GT Karnal Road, ND-110036."],
         mapsUrl: "https://maps.app.goo.gl/SFuD5pBEoPLhfBGUA",
       },
       {
-        label: "Venue 2 — Wedding",
-        name: "RAJ DARBAR HALL",
-        address: ["City Park Green Resort,", "NH-1, GT Karnal Road, ND-110036."],
-        mapsUrl: "https://maps.app.goo.gl/VJBji6XWqyooTyAN9",
+        label: "Ghurchari",
+    
+  name: "Venue - RAJ DARBAR HALL, City Park Green Resort",
+  address: ["NH-1, GT Karnal Road, ND-110036."],
+        mapsUrl: "https://maps.app.goo.gl/UWUUzPderMVHyJnB6",
       },
     ],
     image: weddingImg,
   },
 ];
 
-function DetailRow({ label, value }: { label: string; value: ReactNode }) {
+function DetailRow({ label, value }: { label: ReactNode; value: ReactNode }) {
   return (
     <div className="flex gap-3">
-      <span className="w-16 shrink-0 font-display text-[9px] uppercase tracking-[0.22em] text-muted-foreground pt-1">
+      <span className="w-28 shrink-0 font-display text-[9px] uppercase tracking-[0.22em] text-muted-foreground pt-1">
         {label}
       </span>
       <div className="font-body text-[15px] leading-snug text-ink">{value}</div>
@@ -193,39 +196,78 @@ export function EventCards() {
                 )}
                 <GoldDivider className="mt-4 w-32" />
 
-                <div className="mt-4 space-y-2.5">
-                  <DetailRow label="Date" value={event.date} />
-                  <DetailRow label="Day" value={event.day} />
-                  {event.time && <DetailRow label="Time" value={event.time} />}
-                  {event.schedules?.map((schedule) => (
-                    <DetailRow key={schedule.label} label={schedule.label} value={schedule.time} />
-                  ))}
-                </div>
+<div className="mt-4 space-y-2.5">
+  <DetailRow label="Date" value={event.date} />
+  <DetailRow label="Day" value={event.day} />
+  {event.time && <DetailRow label="Time" value={event.time} />}
+</div>
 
-                <div className="mt-5 space-y-5">
-                  {event.venues.map((venue, index) => (
-                    <div key={`${venue.label}-${index}`} className={index > 0 ? "border-t border-border pt-5" : ""}>
-                      <p className="font-display text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
-                        {venue.label}
-                      </p>
-                      <p className="mt-1 font-display text-sm font-semibold tracking-wide text-ink">
-                        {venue.name}
-                      </p>
-                      <p className="mt-1 font-body text-[15px] leading-snug text-ink">
-                        {venue.address.map((line) => <span key={line} className="block">{line}</span>)}
-                      </p>
-                      <a
-                        href={venue.mapsUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="mt-4 flex items-center justify-center gap-2 rounded-full border border-gold/60 bg-linear-to-r from-gold-soft/45 to-gold/35 px-4 py-2.5 font-display text-[11px] uppercase tracking-[0.25em] text-ink transition-transform active:scale-95"
-                      >
-                        <PinIcon className="h-4 w-4" />
-                        Get Directions
-                      </a>
-                    </div>
-                  ))}
-                </div>
+{event.schedules && event.schedules.length > 0 ? (
+  event.schedules.map((schedule, index) => (
+    <div key={schedule.label} className="mt-5">
+<div className="mt-2 flex flex-wrap items-baseline gap-x-2">
+  <span className="font-display text-sm font-bold">
+    {schedule.label}
+  </span>
+  <span className="font-body text-[15px]">
+    {schedule.time}
+  </span>
+  {schedule.label === "Ghurchari" && event.followedBy && (
+    <span className="font-body text-sm italic text-muted-foreground">
+      {event.followedBy}
+    </span>
+  )}
+</div>
+
+      {event.venues[index] && (
+        <div className="mt-3">
+          <p className="font-display text-sm font-semibold tracking-wide text-ink">
+            {event.venues[index].name}
+          </p>
+          <p className="mt-1 font-body text-[15px] leading-snug text-ink">
+            {event.venues[index].address.map((line) => (
+              <span key={line} className="block">{line}</span>
+            ))}
+          </p>
+          <a
+            href={event.venues[index].mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 flex items-center justify-center gap-2 rounded-full border border-gold/60 bg-linear-to-r from-gold-soft/45 to-gold/35 px-4 py-2.5 font-display text-[11px] uppercase tracking-[0.25em] text-ink transition-transform active:scale-95"
+          >
+            <PinIcon className="h-4 w-4" />
+            Get Directions
+          </a>
+        </div>
+      )}
+    </div>
+  ))
+) : (
+  event.venues.map((venue) => (
+    <div key={venue.name} className="mt-5">
+      <p className="font-display text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+        {venue.label}
+      </p>
+      <p className="font-display text-sm font-semibold tracking-wide text-ink">
+        {venue.name}
+      </p>
+      <p className="mt-1 font-body text-[15px] leading-snug text-ink">
+        {venue.address.map((line) => (
+          <span key={line} className="block">{line}</span>
+        ))}
+      </p>
+      <a
+        href={venue.mapsUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 flex items-center justify-center gap-2 rounded-full border border-gold/60 bg-linear-to-r from-gold-soft/45 to-gold/35 px-4 py-2.5 font-display text-[11px] uppercase tracking-[0.25em] text-ink transition-transform active:scale-95"
+      >
+        <PinIcon className="h-4 w-4" />
+        Get Directions
+      </a>
+    </div>
+  ))
+)}
               </div>
             </article>
           </Reveal>
@@ -235,3 +277,5 @@ export function EventCards() {
     </section>
   );
 }
+
+          
